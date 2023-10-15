@@ -2,12 +2,14 @@ button.addEventListener('click', e => {
     var userName = document.getElementById('name').value;
     var image;
     this.images = document.getElementsByClassName('image');
+    this.message = document.getElementById('message');
     
     if(userName==''){
-       this.images[0].style.display = "none";
        for (let i = 0; i < images.length; i++)
             images[i].style.display = "none";
+        this.message = 'No image found for the corresponding name.';
     }else{
+        this.message = '';
         const imgName = userName.toLowerCase();
         let image = document.getElementById(imgName);
         /*scale image
